@@ -1,5 +1,9 @@
-// components/Projetos.tsx
+
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+
 
 const projetos = [
   {
@@ -27,8 +31,19 @@ export default function Projetos() {
   return (
     <section id="projetos" className="py-16 bg-surface  text text-text-dark">
       <div className="max-w-[1440px] mx-auto px-4 md:px-12 lg:px-32">
-        <h2 className="text-3xl font-bold mb-10">Projetos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.h2 
+          className="text-3xl font-bold mb-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} 
+        >Projetos</motion.h2>
+        <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+         initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} >
           {projetos.map((projeto) => (
             <div
               key={projeto.nome}
@@ -56,7 +71,7 @@ export default function Projetos() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

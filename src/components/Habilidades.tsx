@@ -1,3 +1,7 @@
+
+"use client";
+import { motion } from "framer-motion";
+
 const habilidades = [
   { nome: "React", icone: "/icons/react.svg" },
   { nome: "Next.js", icone: "/icons/nextjs.svg" },
@@ -10,8 +14,19 @@ export default function Habilidades() {
   return (
     <section className="py-16 bg-primary-light text-text-dark">
       <div className="max-w-[1440px] mx-auto px-4 md:px-12 lg:px-32">
-        <h2 className="text-3xl font-bold mb-10">Habilidades</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+
+        <motion.h2 className="text-3xl font-bold mb-10"
+         initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} 
+        >Habilidades </motion.h2>
+        <motion.div 
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6"
+        initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} >
           {habilidades.map((hab) => (
             <div
               key={hab.nome}
@@ -25,7 +40,7 @@ export default function Habilidades() {
               <p className="text-sm font-medium">{hab.nome}</p>
             </div>
           ))}
-        </div>
+        </motion.div>  
       </div>
     </section>
   );

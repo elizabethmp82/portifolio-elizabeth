@@ -1,3 +1,7 @@
+
+"use client";
+import { motion } from "framer-motion";
+
 export default function TrajetoriaSection() {
   const timelineItems = [
     {
@@ -34,9 +38,19 @@ export default function TrajetoriaSection() {
   return (
     <section id="trajetoria" className="py-16 bg-surface text-text-dark">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8">Minha Trajetória</h2>
+        <motion.h2 className="text-3xl font-bold mb-8"
+        initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} 
+        >Minha Trajetória</motion.h2>
 
-        <div className="relative border-l-4 border-primary pl-6">
+        <motion.div 
+        className="relative border-l-4 border-primary pl-6"
+        initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.1}} >
           {timelineItems.map((item, idx) => (
             <div
               key={idx}
@@ -48,7 +62,7 @@ export default function TrajetoriaSection() {
               <p className="mt-2 text-base text-text-light">{item.descricao}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-// "use client";
+
 import Hero from "../components/Hero";
 import SobreMim from "@/components/SobreMim";
 import Habilidades from "@/components/Habilidades";
@@ -16,8 +16,6 @@ export default function Home() {
         <Projetos />
         <TrajetoriaSection/>
         <ContactSection/>
-    
-      
     </>
   );
 }

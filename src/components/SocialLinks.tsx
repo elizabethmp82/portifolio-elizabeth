@@ -26,19 +26,45 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-6 justify-center mt-6">
-      {socialLinks.map((link, index) => (
-        <a
-          key={index}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={link.label}
-          className="text-accent text-2xl transition transform hover:scale-110 hover:text-primary-dark"
-        >
-          {link.icon}
-        </a>
-      ))}
-    </div>
+    // <div className="flex gap-6 justify-center mt-6">
+    //   {socialLinks.map((link, index) => (
+    //     <a
+    //       key={index}
+    //       href={link.url}
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       aria-label={link.label}
+    //       className="text-accent text-2xl transition transform hover:scale-110 hover:text-primary-dark">
+    //       {link.icon}
+    //     </a>
+    //   ))}
+    //   <h2> Copyright © {new Date().getFullYear()}|
+    //       Todos os direitos reservados.</h2>
+    // </div>
+
+   <div className="mt-6 flex flex-col items-center gap-2 text-sm text-gray-600">
+  {/* Ícones sociais */}
+  <div className="flex gap-6 justify-center">
+    {socialLinks.map((link, index) => (
+      <a
+        key={index}
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.label}
+        className="text-accent text-2xl transition transform hover:scale-110 hover:text-primary-dark"
+      >
+        {link.icon}
+      </a>
+    ))}
+  </div>
+
+  {/* Texto copyright abaixo dos ícones */}
+  <p className="text-center">
+    © {new Date().getFullYear()} Elizabeth Melo | Todos os direitos reservados.
+  </p>
+</div>
+
+
   )
 }

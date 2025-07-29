@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="bg-surface text-text-dark px-4 md:px-12 lg:px-32 py-32">
+      className="bg-surface text-text-dark px-4 md:px-12 lg:px-32 py-36">
       <div  ref={ref} className="flex flex-col-reverse md:flex-row items-center gap-10 max-w-1440px mx-auto">
          <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -30,9 +30,9 @@ export default function Hero() {
             ELIZABETH MELO
           </h1>
           <p className="mt-4 text-lg">Desenvolvedora Front-end</p>
-          <button className="mt-6 px-6 py-2 bg-primary text-white rounded-xl hover:opacity-90 transition">
-            Ver Projetos
-          </button>
+        <a href="/Curriculo-Elizabeth Melo.pdf"  download className="inline-block mt-6 px-6 py-2 bg-primary !text-white font-semibold rounded-xl hover:opacity-90 transition">
+          Conheça Minha Trajetória
+           </a>
         </div>
        </motion.div>
        
