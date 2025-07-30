@@ -16,7 +16,7 @@ export default function TrajetoriaSection() {
       titulo: "Desenvolvedora",
       local: "Laboratório de Empreendedorismo",
       periodo: "2020 - 2021",
-      descricao: "Desenvolvimento do sistema SIAAR (Sistema Inteligente de Automação de Água para Rega), voltado à automação de irrigação em pequenos cultivos.",
+      descricao: "Desenvolvimento do sistema SIAAR (Sistema Inteligente de Automação de Água para Regar), voltado à automação de irrigação em pequenos cultivos.",
     },
      {
       tipo: "experiencia",
