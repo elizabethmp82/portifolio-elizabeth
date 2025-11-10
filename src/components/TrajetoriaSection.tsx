@@ -11,6 +11,13 @@ export default function TrajetoriaSection() {
       periodo: "2018 - 2021",
       descricao: "Foco em HTML, CSS, JavaScript moderno e React.",
     },
+     {
+      tipo: "educacao",
+      titulo: "Pós-graduação em Engenharia de Software",
+      local: "UniFavip",
+      periodo: "2024 - 2025",
+      descricao: "Abordagem prática em arquitetura de software, bancos de dados e DevOps.",
+    },
         {
       tipo: "experiencia",
       titulo: "Desenvolvedora",
@@ -24,14 +31,7 @@ export default function TrajetoriaSection() {
       local: "Sindicato das Empresas de Transporte de Passageiros de Belém-SETRANSBEL",
       periodo: "2021 - Atual",
       descricao: "Atuo no suporte ao cliente interno além de realizar a manutenção de sistemas legados e no desenvolvimento de interfaces modernas com React, Next.js e Tailwind.",
-    },
-    {
-      tipo: "educacao",
-      titulo: "Pós-graduação em Engenharia de Software",
-      local: "UniFavip",
-      periodo: "2024 - 2025",
-      descricao: "Abordagem prática em arquitetura de software, bancos de dados e DevOps.",
-    },
+    }
  
   ];
 

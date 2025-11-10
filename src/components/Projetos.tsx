@@ -3,20 +3,26 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
+///https://petclin.vercel.app/
 
 const projetos = [
-  {
-    nome: "ClimaFácil",
-    descricao: "Aplicativo web de previsão do tempo, que permite aos usuários buscar o clima de uma cidade e exibir as informações detalhadas.Tecnologias: Javascript, HTML,CSS",
-    imagem: "/imagem/clima.png",
-    link: "https://climafacil.vercel.app/",
-  },
+   {
+    nome: "PetClin",
+    descricao: "Landing page moderna para uma clínica veterinária. Desenvolvida com Next.js e Tailwind, apresentando serviços, equipe e agendamento rápido.",
+    imagem: "/imagem/petclin.png",
+    link: "https://petclin.vercel.app/",
+  }, 
   {
     nome: "Boletim Online",
     descricao: "É um site PWA leve e responsivo que exibe aniversariantes, eventos e mensagens do mês da igreja.Tecnologias:Next.js,React,TypeScript,Material UI,Google Sheets",
     imagem: "/imagem/boletim.png",
     link: "https://boletimiap.vercel.app/",
+  },
+  {
+    nome: "ClimaFácil",
+    descricao: "Aplicativo web de previsão do tempo, que permite aos usuários buscar o clima de uma cidade e exibir as informações detalhadas.Tecnologias: Javascript, HTML,CSS",
+    imagem: "/imagem/clima.png",
+    link: "https://climafacil.vercel.app/",
   },
   {
     nome: "WebAgendamento",
