@@ -3,9 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-///https://petclin.vercel.app/
 
 const projetos = [
+  {
+    nome: "FitClub",
+    descricao: "Landing page moderna para uma academia. Desenvolvida com Next.js e Tailwind, apresentando serviços, equipe e planos.",
+    imagem: "/imagem/fitclub.png",
+    link: "https://fitclubdb.vercel.app/",
+  }, 
    {
     nome: "PetClin",
     descricao: "Landing page moderna para uma clínica veterinária. Desenvolvida com Next.js e Tailwind, apresentando serviços, equipe e agendamento rápido.",
