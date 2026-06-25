@@ -23,7 +23,7 @@ export default function SobreMim() {
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true, amount: 0.1}}
         >
-          Sou <strong>Elizabeth Melo</strong>, desenvolvedora Front-end apaixonada por transformar ideias em experiências digitais envolventes. Tenho experiência com tecnologias modernas como <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong> e <strong>Tailwind CSS</strong>, com foco em performance, responsividade e design intuitivo. Estou sempre em busca de evoluir, criar soluções criativas e entregar interfaces que realmente conectam com as pessoas.
+          Sou <strong>Elizabeth Melo</strong>, desenvolvedora Full Stack apaixonada por construir aplicações web modernas, escaláveis e de alta performance. Tenho experiência com <strong>React</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong> e <strong>Tailwind</strong> no front-end, e <strong>Node.js</strong>, <strong>Python</strong> e <strong>PostgreSQL</strong> no back-end. Gosto de atuar em todo o ciclo de desenvolvimento — do levantamento de requisitos à entrega — sempre com foco em qualidade, boas práticas e soluções que geram valor real para o usuário.
         </motion.p>
       </div>
     </section>

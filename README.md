@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Elizabeth Melo
 
-## Getting Started
+Portfólio pessoal desenvolvido com Next.js, apresentando projetos, habilidades, trajetória profissional e formulário de contato.
 
-First, run the development server:
+## Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 15** com App Router e Turbopack
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** — animações
+- **EmailJS** — envio de e-mails pelo formulário de contato
+- **Lucide React** e **React Icons** — ícones
+
+## Estrutura
+
+```
+src/
+├── app/
+│   ├── layout.tsx            # Layout global, metadados e Navbar
+│   ├── page.tsx              # Página principal (composição das seções)
+│   └── globals.css           # Estilos globais
+└── components/
+    ├── Hero.tsx              # Seção inicial com apresentação
+    ├── SobreMim.tsx          # Sobre mim
+    ├── Habilidades.tsx       # Stack de tecnologias
+    ├── Projetos.tsx          # Projetos em destaque
+    ├── TrajetoriaSection.tsx # Trajetória profissional
+    ├── ContactSection.tsx    # Seção de contato
+    ├── ContactForm.tsx       # Formulário de contato (EmailJS)
+    ├── Navbar.tsx            # Navegação
+    ├── SocialLinks.tsx       # Links para redes sociais
+    └── Toast.tsx             # Notificações de feedback
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como rodar localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Instalar dependências
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Iniciar servidor de desenvolvimento
+npm run dev
+```
 
-## Learn More
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Comando         | Descrição                              |
+|-----------------|----------------------------------------|
+| `npm run dev`   | Servidor de desenvolvimento com Turbopack |
+| `npm run build` | Build de produção                      |
+| `npm run start` | Inicia o servidor de produção          |
+| `npm run lint`  | Verifica linting com ESLint            |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contato
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **E-mail:** meloelizabethp@gmail.com

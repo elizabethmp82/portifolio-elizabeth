@@ -12,7 +12,7 @@ const horizonFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Elizabeth Melo | Desenvolvedora Front-end',
+  title: 'Elizabeth Melo | Desenvolvedora Full Stack',
   description: 'Portfólio Elizabeth Melo',
 }
 
