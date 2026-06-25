@@ -6,36 +6,33 @@ import { motion } from "framer-motion";
 
 const projetos = [
   {
+    nome: "IgrejaSync",
+    descricao: "Plataforma SaaS multi-tenant de gestão e comunicação para igrejas, desenvolvida do zero. Centraliza administração, comunicação interna, gestão financeira, escalas, células e eventos, com painel web e app do membro (PWA).",
+    imagem: "/imagem/igrejasync.png",
+    link: "https://igrejasync.com.br/login",
+    tecnologias: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "TanStack Query", "NextAuth.js", "Docker"],
+  },
+  {
     nome: "FitClub",
     descricao: "Landing page moderna para uma academia. Desenvolvida com Next.js e Tailwind, apresentando serviços, equipe e planos.",
     imagem: "/imagem/fitclub.png",
     link: "https://fitclubdb.vercel.app/",
-  }, 
-   {
+    tecnologias: ["Next.js", "React", "Tailwind CSS"],
+  },
+  {
     nome: "PetClin",
     descricao: "Landing page moderna para uma clínica veterinária. Desenvolvida com Next.js e Tailwind, apresentando serviços, equipe e agendamento rápido.",
     imagem: "/imagem/petclin.png",
     link: "https://petclin.vercel.app/",
-  }, 
-  {
-    nome: "Boletim Online",
-    descricao: "É um site PWA leve e responsivo que exibe aniversariantes, eventos e mensagens do mês da igreja.Tecnologias:Next.js,React,TypeScript,Material UI,Google Sheets",
-    imagem: "/imagem/boletim.png",
-    link: "https://boletimiap.vercel.app/",
-  },
-  {
-    nome: "ClimaFácil",
-    descricao: "Aplicativo web de previsão do tempo, que permite aos usuários buscar o clima de uma cidade e exibir as informações detalhadas.Tecnologias: Javascript, HTML,CSS",
-    imagem: "/imagem/clima.png",
-    link: "https://climafacil.vercel.app/",
+    tecnologias: ["Next.js", "React", "Tailwind CSS"],
   },
   {
     nome: "WebAgendamento",
-    descricao: "Sistema de agendamento online, garantindo uma experiência fluida e responsiva para os usuários.Tecnologias:React,TypeScript,Material UI,Node.js",
+    descricao: "Sistema de agendamento online, garantindo uma experiência fluida e responsiva para os usuários.",
     imagem: "/imagem/agendamento.png",
     link: "https://webagendamentobelem.reglus.com.br/",
+    tecnologias: ["React", "TypeScript", "Material UI", "Node.js"],
   },
-
 ];
 
 export default function Projetos() {
@@ -58,27 +55,46 @@ export default function Projetos() {
           {projetos.map((projeto) => (
             <div
               key={projeto.nome}
-              className="bg-white rounded-2xl overflow-hidden shadow-card transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-white rounded-2xl overflow-hidden shadow-card transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col"
             >
               <div className="overflow-hidden h-48">
-                <img
-                  src={projeto.imagem}
-                  alt={projeto.nome}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
+                {projeto.imagem ? (
+                  <img
+                    src={projeto.imagem}
+                    alt={projeto.nome}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold tracking-wide">{projeto.nome}</span>
+                  </div>
+                )}
               </div>
-              <div className="p-4 flex flex-col justify-between h-[180px]">
-                <div>
-                  <h3 className="text-xl font-semibold">{projeto.nome}</h3>
-                  <p className="text-sm text-[--color-text-muted]">{projeto.descricao}</p>
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="text-xl font-semibold">{projeto.nome}</h3>
+                <p className="text-sm text-[--color-text-muted] mt-1">{projeto.descricao}</p>
+                {projeto.tecnologias.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {projeto.tecnologias.map((tec) => (
+                      <span key={tec} className="text-xs bg-primary/10 text-primary font-medium px-2 py-0.5 rounded-full">
+                        {tec}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <div className="mt-auto pt-4">
+                  {projeto.link ? (
+                    <a
+                      href={projeto.link}
+                      target="_blank"
+                      className="text-[--color-primary] font-semibold hover:underline"
+                    >
+                      Ver projeto →
+                    </a>
+                  ) : (
+                    <span className="text-sm text-muted italic">Em desenvolvimento</span>
+                  )}
                 </div>
-                <a
-                  href={projeto.link}
-                  target="_blank"
-                  className="mt-4 text-[--color-primary] font-semibold hover:underline"
-                >
-                  Ver projeto →
-                </a>
               </div>
             </div>
           ))}

@@ -1,13 +1,19 @@
 
 "use client";
 import { motion } from "framer-motion";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiNodedotjs, SiPython, SiPostgresql, SiGit, SiDocker } from "react-icons/si";
 
 const habilidades = [
-  { nome: "React", icone: "/icons/react.svg" },
-  { nome: "Next.js", icone: "/icons/nextjs.svg" },
-  { nome: "TypeScript", icone: "/icons/typescript.svg" },
-  { nome: "Tailwind CSS", icone: "/icons/tailwind_css.svg" },
-  { nome: "HTML", icone: "/icons/html.svg" },
+  { nome: "React", icone: SiReact, cor: "#61DAFB" },
+  { nome: "Next.js", icone: SiNextdotjs, cor: "#000000" },
+  { nome: "TypeScript", icone: SiTypescript, cor: "#3178C6" },
+  { nome: "Tailwind CSS", icone: SiTailwindcss, cor: "#06B6D4" },
+  { nome: "HTML", icone: SiHtml5, cor: "#E34F26" },
+  { nome: "Node.js", icone: SiNodedotjs, cor: "#339933" },
+  { nome: "Python", icone: SiPython, cor: "#3776AB" },
+  { nome: "PostgreSQL", icone: SiPostgresql, cor: "#4169E1" },
+  { nome: "Git", icone: SiGit, cor: "#F05032" },
+  { nome: "Docker", icone: SiDocker, cor: "#2496ED" },
 ];
 
 export default function Habilidades() {
@@ -19,9 +25,9 @@ export default function Habilidades() {
          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.1}} 
+          viewport={{ once: true, amount: 0.1}}
         >Habilidades </motion.h2>
-        <motion.div 
+        <motion.div
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6"
         initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,15 +38,15 @@ export default function Habilidades() {
               key={hab.nome}
               className="bg-white rounded-xl p-4 shadow-card text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg"
             >
-              <img
-                src={hab.icone}
-                alt={hab.nome}
-                className="w-12 h-12 mx-auto mb-2"
+              <hab.icone
+                size={48}
+                color={hab.cor}
+                className="mx-auto mb-2"
               />
               <p className="text-sm font-medium">{hab.nome}</p>
             </div>
           ))}
-        </motion.div>  
+        </motion.div>
       </div>
     </section>
   );

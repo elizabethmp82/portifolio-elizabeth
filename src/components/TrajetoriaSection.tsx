@@ -9,13 +9,13 @@ export default function TrajetoriaSection() {
       titulo: "Bacharelado em Sistemas de Informação",
       local: "Faculdade Ideal",
       periodo: "2018 - 2021",
-      descricao: "Foco em HTML, CSS, JavaScript moderno e React.",
+      descricao: "Formação em desenvolvimento de sistemas, banco de dados, engenharia de software e estruturas de dados.",
     },
      {
       tipo: "educacao",
       titulo: "Pós-graduação em Engenharia de Software",
       local: "UniFavip",
-      periodo: "2024 - 2025",
+      periodo: "2025 - 2026",
       descricao: "Abordagem prática em arquitetura de software, bancos de dados e DevOps.",
     },
         {
@@ -27,10 +27,10 @@ export default function TrajetoriaSection() {
     },
      {
       tipo: "experiencia",
-      titulo: "Auxiliar de Programação",
+      titulo: "Desenvolvedora Full Stack",
       local: "Sindicato das Empresas de Transporte de Passageiros de Belém-SETRANSBEL",
       periodo: "2021 - Atual",
-      descricao: "Atuo no suporte ao cliente interno além de realizar a manutenção de sistemas legados e no desenvolvimento de interfaces modernas com React, Next.js e Tailwind.",
+      descricao: "Desenvolvimento e manutenção de aplicações web com React, Next.js, TypeScript, Node.js e Python. Integração com APIs REST, bancos de dados PostgreSQL e Oracle, code review e deploys em produção.",
     }
  
   ];
