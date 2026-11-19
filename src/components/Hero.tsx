@@ -46,7 +46,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="mx-auto grid max-w-[1200px] items-center gap-[clamp(24px,6vw,72px)] px-6 pt-[clamp(32px,7vw,88px)] pb-[clamp(72px,13vw,176px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]"
+      className="mx-auto grid max-w-[1200px] items-center gap-6 px-6 pt-6 sm:gap-[clamp(40px,6vw,72px)] sm:pt-[clamp(48px,7vw,88px)] pb-[clamp(72px,13vw,176px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]"
     >
       <div className="flex flex-col gap-[22px]">
         <p className="intro d1 m-0 inline-flex items-center gap-2.5 font-mono text-[13px] font-semibold tracking-[0.12em] text-ink">
@@ -69,48 +69,51 @@ export default function Hero() {
         </p>
 
         <p className="intro d3 m-0 max-w-[500px] text-base sm:text-[17px] leading-[1.65] text-muted">
-          Desenvolvo aplicações web que unem tecnologia, organização e experiências intuitivas. Do
-          planejamento à implementação, gosto de transformar desafios em soluções que fazem sentido.
+          Desenvolvo aplicações web que unem tecnologia, organização e experiências intuitivas.
+          <span className="hidden sm:inline">
+            {' '}Do planejamento à implementação, gosto de transformar desafios em soluções que fazem
+            sentido.
+          </span>
         </p>
 
-        <div className="intro d4 mt-1.5 flex flex-wrap gap-3">
+        <div className="intro d4 mt-4 flex flex-col gap-2.5 sm:mt-1.5 sm:flex-row sm:flex-wrap sm:gap-3">
           <a
             href="#projetos"
-            className="btn btn-primary inline-flex min-h-[50px] items-center justify-center gap-2.5 max-[479px]:w-full rounded-full bg-accent px-6 py-3.5 font-semibold text-white no-underline"
+            className="btn btn-primary inline-flex min-h-[50px] items-center justify-center gap-2.5 rounded-full bg-accent px-6 py-3.5 font-semibold text-white no-underline"
           >
-            <Code size={18} strokeWidth={2.2} aria-hidden="true" />
+            <Code size={18} strokeWidth={2.2} aria-hidden="true" className="hidden sm:block" />
             Ver projetos
             <ArrowUpRight size={16} strokeWidth={2.2} aria-hidden="true" />
           </a>
           <a
             href="#contato"
-            className="btn btn-ghost inline-flex min-h-[50px] items-center justify-center gap-2.5 max-[479px]:w-full rounded-full border-[1.5px] border-ink px-6 py-3.5 font-semibold text-ink no-underline"
+            className="btn btn-ghost inline-flex min-h-[50px] items-center justify-center gap-2.5 rounded-full border-[1.5px] border-ink px-6 py-3.5 font-semibold text-ink no-underline"
           >
-            <Mail size={18} aria-hidden="true" />
+            <Mail size={18} aria-hidden="true" className="hidden sm:block" />
             Entrar em contato
           </a>
         </div>
 
-        <div className="intro d5 flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold">
+        <div className="intro d5 flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm font-semibold sm:justify-start">
           <a className="ulink inline-flex min-h-11 items-center text-ink" href="https://github.com/elizabethmp82" target="_blank" rel="noopener">GitHub</a>
           <a className="ulink inline-flex min-h-11 items-center text-ink" href="https://www.linkedin.com/in/melo-elizabeth" target="_blank" rel="noopener">LinkedIn</a>
           <a className="ulink inline-flex min-h-11 items-center text-ink" href="mailto:meloelizabethp@gmail.com">E-mail</a>
         </div>
       </div>
 
-      <div className="intro d3 relative flex flex-col items-center justify-center gap-6 pt-6 sm:min-h-[480px] sm:pt-0">
-        <div aria-hidden="true" className="blob absolute top-[4%] right-[6%] h-[92%] w-[76%] bg-blush" />
-        <div aria-hidden="true" className="absolute bottom-[10%] left-[8%] h-20 w-20 rounded-3xl sm:left-[14%] sm:h-[120px] sm:w-[120px] sm:rounded-[32px] bg-lilac opacity-70" />
-        <svg aria-hidden="true" width="64" height="56" viewBox="0 0 64 56" className="absolute top-0 left-[22%] w-12 sm:left-[30%] sm:w-16">
+      <div className="intro d3 relative order-first flex h-[230px] items-center justify-center sm:order-none sm:h-auto sm:min-h-[480px]">
+        <div aria-hidden="true" className="blob absolute top-2.5 left-[calc(50%_-_120px)] h-[210px] w-[230px] bg-blush sm:top-[4%] sm:right-[6%] sm:left-auto sm:h-[92%] sm:w-[76%]" />
+        <div aria-hidden="true" className="absolute bottom-[10%] left-[14%] hidden h-[120px] w-[120px] rounded-[32px] bg-lilac opacity-70 sm:block" />
+        <svg aria-hidden="true" width="64" height="56" viewBox="0 0 64 56" className="absolute top-0 left-[30%] hidden sm:block">
           <path d="M8 40 22 26M30 30l2-22M40 34l18-10" stroke="#C2391B" strokeWidth="4" strokeLinecap="round" />
         </svg>
 
-        <div className="floaty relative aspect-square w-[min(340px,68vw)] overflow-hidden rounded-full border-[6px] sm:border-8 border-cream bg-lilac shadow-[0_30px_60px_-30px_rgba(31,23,32,.4)]">
+        <div className="floaty relative aspect-square w-[178px] overflow-hidden rounded-full border-[6px] sm:w-[340px] sm:max-w-[72vw] sm:border-8 border-cream bg-lilac shadow-[0_30px_60px_-30px_rgba(31,23,32,.4)]">
           <Image
             src={Foto}
             alt="Foto de Elizabeth Melo"
             fill
-            sizes="(max-width: 640px) 68vw, 340px"
+            sizes="(max-width: 640px) 178px, 340px"
             priority
             className="object-cover"
           />
@@ -118,7 +121,7 @@ export default function Hero() {
 
         <ul
           aria-label="Como eu trabalho"
-          className="check relative z-10 m-0 grid list-none grid-cols-2 gap-x-5 gap-y-2.5 rounded-[20px] border border-line bg-white/85 px-5 py-4 text-sm sm:absolute sm:top-[18%] sm:left-0 sm:flex sm:flex-col sm:gap-3 sm:px-[22px] sm:py-[18px] shadow-[0_16px_32px_-20px_rgba(31,23,32,.25)]"
+          className="check absolute top-[18%] left-0 m-0 hidden list-none flex-col gap-3 rounded-[20px] border border-line bg-white/85 px-[22px] py-[18px] text-sm sm:flex shadow-[0_16px_32px_-20px_rgba(31,23,32,.25)]"
         >
           {etapas.map((etapa) => (
             <li key={etapa} className="flex items-center gap-2.5">
@@ -130,9 +133,9 @@ export default function Hero() {
 
         <div
           aria-hidden="true"
-          className="tile absolute top-[6%] right-[2%] flex h-16 w-16 items-center justify-center rounded-[20px] sm:top-[12%] sm:right-0 sm:h-[92px] sm:w-[92px] sm:rounded-[26px] bg-peach shadow-[0_16px_30px_-18px_rgba(194,57,27,.5)]"
+          className="tile absolute top-2 left-[min(calc(50%_+_107px),calc(100%_-_56px))] flex h-14 w-14 items-center justify-center rounded-2xl sm:top-[12%] sm:right-0 sm:left-auto sm:h-[92px] sm:w-[92px] sm:rounded-[26px] bg-peach shadow-[0_16px_30px_-18px_rgba(194,57,27,.5)]"
         >
-          <CodeXml strokeWidth={2} className="h-7 w-7 text-accent sm:h-10 sm:w-10" />
+          <CodeXml strokeWidth={2} className="h-6 w-6 text-accent sm:h-10 sm:w-10" />
         </div>
       </div>
     </section>
