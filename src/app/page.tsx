@@ -1,21 +1,17 @@
-
-import Hero from "../components/Hero";
-import SobreMim from "@/components/SobreMim";
-import Habilidades from "@/components/Habilidades";
-import Projetos from "@/components/Projetos";
-import TrajetoriaSection from "@/components/TrajetoriaSection";
-import ContactSection from "@/components/ContactSection";
-
+import Hero from '@/components/Hero'
+import Sobre from '@/components/Sobre'
+import Projetos from '@/components/Projetos'
+import Especialidades from '@/components/Especialidades'
+import Contato from '@/components/Contato'
 
 export default function Home() {
   return (
     <>
-      <Hero/>
-        <SobreMim />
-        <Habilidades />
-        <Projetos />
-        <TrajetoriaSection/>
-        <ContactSection/>
+      <Hero />
+      <Sobre />
+      <Projetos />
+      <Especialidades />
+      <Contato />
     </>
-  );
+  )
 }
