@@ -5,6 +5,7 @@ import './globals.css'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import JsonLd from '../components/JsonLd'
 
 const GTM_ID = 'GTM-K94PCPDX'
 
@@ -116,6 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <JsonLd />
         <Header />
         <main>{children}</main>
         <Footer />
