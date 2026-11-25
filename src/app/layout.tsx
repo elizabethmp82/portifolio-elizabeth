@@ -64,14 +64,23 @@ export const metadata: Metadata = {
     siteName: 'Elizabeth Melo',
     title: 'Elizabeth Melo | Desenvolvedora Full Stack',
     description:
-      'Tecnologia, criatividade e soluções digitais. Conheça minha trajetória profissional e meus projetos.',
+      'Conheça minha trajetória, projetos e soluções em tecnologia.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Elizabeth Melo — Desenvolvedora Full Stack',
+      },
+    ],
   },
 
   twitter: {
     card: 'summary_large_image',
     title: 'Elizabeth Melo | Desenvolvedora Full Stack',
     description:
-      'Tecnologia, criatividade e soluções digitais. Conheça minha trajetória profissional e meus projetos.',
+      'Conheça minha trajetória, projetos e soluções em tecnologia.',
+    images: ['/og-image.png'],
   },
 }
 
