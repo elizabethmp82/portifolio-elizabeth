@@ -27,9 +27,52 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Elizabeth Melo — Desenvolvedora Full Stack',
+  metadataBase: new URL('https://elizabethmelo.com'),
+
+  title: {
+    default: 'Elizabeth Melo | Desenvolvedora Full Stack',
+    template: '%s | Elizabeth Melo',
+  },
+
   description:
-    'Portfólio de Elizabeth Melo, desenvolvedora Full Stack. Aplicações web que unem tecnologia, organização e experiências intuitivas.',
+    'Desenvolvedora Full Stack em Belém, PA. Conheça minha trajetória, projetos e soluções em desenvolvimento web, APIs e tecnologia.',
+
+  authors: [{ name: 'Elizabeth Melo' }],
+
+  creator: 'Elizabeth Melo',
+
+  alternates: {
+    canonical: '/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://elizabethmelo.com',
+    siteName: 'Elizabeth Melo',
+    title: 'Elizabeth Melo | Desenvolvedora Full Stack',
+    description:
+      'Tecnologia, criatividade e soluções digitais. Conheça minha trajetória profissional e meus projetos.',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Elizabeth Melo | Desenvolvedora Full Stack',
+    description:
+      'Tecnologia, criatividade e soluções digitais. Conheça minha trajetória profissional e meus projetos.',
+  },
 }
 
 export default function RootLayout({

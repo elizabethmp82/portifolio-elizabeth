@@ -3,7 +3,7 @@
 Portfólio pessoal de **Elizabeth Melo**, desenvolvedora Full Stack. Uma página única, rápida e
 responsiva que apresenta quem eu sou, os projetos que desenvolvi e como entrar em contato.
 
-🔗 **[elizabethmelo.com.br](https://elizabethmelo.com.br)**
+🔗 **[elizabethmelo.com](https://elizabethmelo.com)**
 
 > **O conceito:** `<em>` é a tag HTML de *ênfase*, e também as minhas iniciais. Uma marca que
 > fala a língua de quem programa e diz: "presta atenção nesse trabalho".
