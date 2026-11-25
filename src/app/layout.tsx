@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: 'Elizabeth Melo',
     title: 'Elizabeth Melo | Desenvolvedora Full Stack',
     description:
-      'Conheça minha trajetória, projetos e soluções em tecnologia.',
+      'Desenvolvedora Full Stack em Belém, PA. Transformo ideias em soluções digitais, unindo tecnologia, criatividade e experiências intuitivas.',
     images: [
       {
         url: '/og-image.png',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Elizabeth Melo | Desenvolvedora Full Stack',
     description:
-      'Conheça minha trajetória, projetos e soluções em tecnologia.',
+      'Desenvolvedora Full Stack em Belém, PA. Transformo ideias em soluções digitais, unindo tecnologia, criatividade e experiências intuitivas.',
     images: ['/og-image.png'],
   },
 }
