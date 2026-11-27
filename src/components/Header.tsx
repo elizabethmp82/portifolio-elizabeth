@@ -62,19 +62,19 @@ export default function Header() {
 
   return (
     <header
-      className={`hdr sticky top-0 z-20 border-b border-line/80 bg-cream/80 backdrop-blur-md ${scrolled ? 'is-scrolled' : ''}`}
+      className={`hdr sticky top-0 z-20 border-b border-border/80 bg-bg/80 backdrop-blur-md ${scrolled ? 'is-scrolled' : ''}`}
     >
       <nav
         aria-label="Principal"
-        className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-3"
+        className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-3"
       >
         <a
           href="#inicio"
           onClick={() => go('inicio')}
-          className="inline-flex min-h-11 items-center gap-2.5 text-ink no-underline"
+          className="inline-flex min-h-11 items-center gap-2.5 whitespace-nowrap text-ink no-underline"
         >
           <Logo animated className="text-[22px]" />
-          <span className="font-display text-[19px] font-bold tracking-[-0.02em]">Elizabeth Melo</span>
+          <span className="font-display text-[17px] font-bold tracking-[-0.02em] min-[360px]:text-[19px]">Elizabeth Melo</span>
         </a>
 
         <div className="hidden items-center gap-2 min-[861px]:flex">{navLinks()}</div>
@@ -94,14 +94,14 @@ export default function Header() {
           onClick={() => setMenuOpen((o) => !o)}
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={menuOpen}
-          className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border-[1.5px] border-line bg-white text-ink min-[861px]:hidden"
+          className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border-[1.5px] border-border bg-white text-ink min-[861px]:hidden"
         >
           {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
       </nav>
 
       {menuOpen && (
-        <div className="flex flex-col gap-0.5 border-t border-line px-6 pt-2 pb-5 min-[861px]:hidden">
+        <div className="flex flex-col gap-0.5 border-t border-border px-6 pt-2 pb-5 min-[861px]:hidden">
           {navLinks(true)}
           <a
             href={CURRICULO_URL}

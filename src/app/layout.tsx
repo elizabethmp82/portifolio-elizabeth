@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
+import { Instrument_Serif, Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
@@ -25,6 +25,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['500', '600', '700'],
   variable: '--font-jetbrains-mono',
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
+  variable: '--font-instrument-serif',
 })
 
 export const metadata: Metadata = {
@@ -93,7 +100,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -107,7 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       {/* suppressHydrationWarning: extensões do navegador injetam atributos no <html>/<body> */}
-      <body className="font-sans text-ink bg-cream" suppressHydrationWarning>
+      <body className="font-sans text-ink bg-bg" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -118,6 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <JsonLd />
+        <div className="grain" aria-hidden="true" />
         <Header />
         <main>{children}</main>
         <Footer />
